@@ -96,9 +96,9 @@ def deleteTodo(request,todo_pk):
 
 @login_required
 def completedTodo(request):
-    todoss = Todo.objects.filter(user=request.user,DateCompeleted__isnull=False)
+    todos = Todo.objects.filter(user=request.user,DateCompeleted__isnull=False)
 
-    return render(request, 'todo/completedTodo.html',{'todoss':todoss} )
+    return render(request, 'todo/completedTodo.html',{'todos':todos} )
 
 
 
