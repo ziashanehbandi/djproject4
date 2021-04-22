@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'todo/base.html' %}
+
+
+{% block content %}
+<h1>compleated todos:</h1>
+<ul>
+    {% for todo in todoss %}
+        <l>
+        <b> {{ todo.title }} </b> - {{ todo.DateCompeleted }} <br>
+
+        </l>
+
+
+    {% endfor %}
+
+
+
+</ul>
+{% endblock %}
+</body>
+</html>
